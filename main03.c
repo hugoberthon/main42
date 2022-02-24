@@ -5,19 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaby <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 15:16:00 by afaby             #+#    #+#             */
-/*   Updated: 2022/02/20 15:16:56 by afaby            ###   ########.fr       */
+/*   Created: 2022/02/20 17:17:41 by afaby             #+#    #+#             */
+/*   Updated: 2022/02/21 11:41:23 by afaby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
+#include <string.h>
 
-int	ft_str_is_numeric(char *str);
+char	*ft_strncat(char *dest, char *src, unsigned int nb);
 
 int	main(void)
 {
-	char	test[] = "123456test45numeric";
-	char	test2[] = "1234567890";
+	char	t[50] = "Test ";
+	char	t2[] = "123";
+	char	t3[50] = "Test ";
+	char	t4[] = "123";
+	unsigned int	size = 1;
 
-	printf("Valeur avec test[] : %d\n", ft_str_is_numeric(test));
-	printf("Valeur avec test2[] : %d\n", ft_str_is_numeric(test2));
+	printf("Valeur de ft_strcat(\"Test \", \"%s\", %d) : %s\n\n", t2, size, ft_strncat(t, t2, size));
+
+	printf("Valeur de strcat(\"Test \", \"%s\", %d) : %s\n", t4, size, strncat(t3, t4, size));
 }
